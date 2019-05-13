@@ -1,39 +1,3 @@
-/*              BREAKPOINT ARGUMENT CHOICES
-0 - 600px:      phone
-600 - 900px:    tab-port (tablet portrait)
-900 - 1200px:   tab-land (tablet landscape)
-1200 - 1800px:  because desktop-first approach, no argument
-1800+           big-desktop
-*/
-/* CONTENT DIRECTIVE
-Below is an example of a media query in _base.scss if 
-media queries were used throughout instead of mixins:
-
-@media (max-width: 600px) {
-  font-size: 50%;
-}
-
-To use mixins instead, content directives address things like the 50% 
-font-size. For demonstrative purposes, the mixin below could be used
-with the @include content directive place within html on _base.scss to correspond with the mixin immediately below.
-
-@mixin respond-phone {
-  @media (max-width: 600px) {
-    @content };
-  }
-
-(below within html on _base-scss)
-  @include respond-phone (
-    font-size: 50%;
-  }
-  It was refined further, but understanding this is an important part of 
-  understanding what was actually used.
-*/
-/*
-ORDER: Base + typography > general layout + grid > page layout > components
-
-1em = 16px
-*/
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -46,6 +10,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
             transform: translate(0);
   }
 }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -121,8 +86,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 
 html {
-  /* This font-size isn't in typography 
-  because it's used to define 1 rem */
   font-size: 85%;
 }
 
@@ -290,41 +253,45 @@ body {
   padding-top: 1rem;
 }
 
-.btn, .btn:link, .btn:visited {
-  position: relative;
-  font-size: 1.4rem;
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  display: inline-block;
-  border-radius: 10rem;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
+/* .btn {
+  &,
+  &:link,
+  &:visited {
+    background-color: $color-blue-2;
+    position: relative;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+  }
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 
-.btn:hover {
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-}
+  &:hover {
+    transform: translateY(-3px);
 
-.btn:hover::after {
-  -webkit-transform: scaleX(1.2) scaleY(1.3);
-          transform: scaleX(1.2) scaleY(1.3);
-}
+    &::after {
+      transform: scaleX(1.2) scaleY(1.3);
+    }
+  }
 
-.btn:active, .btn:focus {
-  outline: none;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-
-.btn--nav {
-  background-color: red;
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+} */
+.button--nav {
+  background-color: #1c384d;
   color: #d1d4d4;
 }
 
-.btn::after {
+.button--nav::after {
   content: "";
   display: inline-block;
   height: 100%;
@@ -336,13 +303,6 @@ body {
   z-index: -1;
   -webkit-transform: all 0.4s;
           transform: all 0.4s;
-}
-
-.btn--animated {
-  -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
-          animation: moveInBottom 0.5s ease-out 0.75s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
 }
 
 .about-item-2 {
@@ -517,13 +477,6 @@ body {
   color: #d1d4d4;
   background-size: cover;
   text-align: center;
-  /*
-  &__copyright *{
-    border-top: 2px solid $color-blue-2;
-    padding-bottom: 2rem;
-    width: 30%;
-    float: right;
-  }*/
 }
 
 .footer__logo-box {
@@ -604,24 +557,6 @@ body {
   background-position: bottom;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 44vh);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 44vh);
-  /*
-  &__logo-box *{
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-    background-image: linear-gradient(
-      to right bottom,
-      rgba($color-orange-2, 0.1),
-      rgba($color-fade-B, 0.2)
-    );
-    -webkit-background-clip: logo;
-    color: transparent;
-  }
-
-  &__logo {
-    height: 5rem;
-    width: auto;
-  }*/
 }
 
 .header__text-box {

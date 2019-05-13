@@ -7,6 +7,14 @@
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,600,700,900"
       rel="stylesheet"
     />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <title>main</title>
@@ -82,19 +90,9 @@
               CSS experment
             </h3>
             <p class="project-item__text">
-              No real programming languages were harmed in the making of this
+              No programming languages were harmed in the making of this
               project.
             </p>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-container="body"
-              data-toggle="popover"
-              data-placement="top"
-              data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-            >
-              Popover on top
-            </button>
           </div>
           <div class="project-item-3">
             <div class="photo">
@@ -107,7 +105,19 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               ipsum sapiente aspernatur.
             </p>
+            <br />
+            <a
+              tabindex="0"
+              class="data-btn btn-lg btn-secondary"
+              role="button"
+              data-toggle="popover"
+              data-trigger="focus"
+              title="Bootstrap 4 button for TA's jQuery project"
+              data-content="And here's some amazing content. It's very engaging. Right?"
+              >Click Me</a
+            >
           </div>
+
           <div class="project-item-4">
             <div class="photo">
               <img
@@ -256,5 +266,11 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(".popover-dismiss").popover({ trigger: "focus" });
+      $(".popover-dismiss").popover({
+        trigger: "focus"
+      });
+    </script>
   </body>
 </html>
