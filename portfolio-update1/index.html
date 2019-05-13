@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,600,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <title>main</title>
+  </head>
+  <body style="background-color: #F0EBE6">
+    <div class="navigation" id="navbar">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#projects" class="navigation__link"
+              ><span></span>Projects</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#about" class="navigation__link"><span></span>About Me</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#contact" class="navigation__link"
+              ><span></span>Contact Me</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <header class="header" id="home">
+      <div class="header__text-box u-center-text">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">Cindy Neilson</span>
+          <span class="heading-primary--sub">Developing Developer</span>
+        </h1>
+      </div>
+    </header>
+
+    <main>
+      <section id="projects" class="section-project u-center-text">
+        <h2 class="heading-secondary u-margin-bottom-med">
+          Projects
+        </h2>
+        <div class="project-container">
+          <div class="project-item-1">
+            <div class="photo">
+              <a
+                href="https://github.com/Neilson09/space-station"
+                target="_blank"
+                ><img src="/img/grand-tour.png" alt="" width="100"
+              /></a>
+            </div>
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              HTML & CSS project
+            </h3>
+            <p class="project-item__text">
+              A space tourism project featuring the NASA Jet Propulsion
+              Laboratory <q>Visions of the Future</q> posters.
+            </p>
+          </div>
+          <div class="project-item-2">
+            <div class="photo">
+              <a href="https://github.com/Neilson09/boxes" target="_blank"
+                ><img
+                  src="/img/box.png"
+                  alt="GitHub repository for this project"
+                  width="100"
+              /></a>
+            </div>
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              CSS experment
+            </h3>
+            <p class="project-item__text">
+              No real programming languages were harmed in the making of this
+              project.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-container="body"
+              data-toggle="popover"
+              data-placement="top"
+              data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+            >
+              Popover on top
+            </button>
+          </div>
+          <div class="project-item-3">
+            <div class="photo">
+              <img src="/img/baliHai.jpg" alt="picture of Kauai" width="100" />
+            </div>
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              for later expansion
+            </h3>
+            <p class="project-item__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              ipsum sapiente aspernatur.
+            </p>
+          </div>
+          <div class="project-item-4">
+            <div class="photo">
+              <img
+                src="/img/jLighthouse.jpg"
+                alt="picture of Kauai"
+                width="100"
+              />
+            </div>
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Lorem Ipsum
+            </h3>
+            <p class="project-item__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              ipsum sapiente aspernatur.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section-about">
+        <div class="u-center-text u-margin-bottom-med">
+          <h2 class="heading-secondary">
+            About Me
+          </h2>
+        </div>
+        <div class="about-container">
+          <div class="about-item-1">
+            <h3 class="heading-tertiary">
+              I like solving problems
+            </h3>
+            <p class="paragraph">
+              From playing with puzzles as a child to performing risk-analysis
+              as an underwriter, I've always enjoyed tinkering with problems.
+              The same things I like about problem-solving make writing code
+              fun, and factored into my decision to study software development
+              full-time.
+            </p>
+            <h3 class="heading-tertiary">
+              A Few More Favorites:
+            </h3>
+            <ul>
+              <li>Reading</li>
+              <li>Live music</li>
+              <li>Travel</li>
+              <li>Photography</li>
+              <li>Coffee</li>
+              <li>Dogs</li>
+              <li>Chocolate</li>
+              <li>Meeting new people</li>
+              <li>Learning new things</li>
+            </ul>
+          </div>
+          <div class="about-item-2 u-center-text">
+            <img
+              src="/img/1.jpg"
+              alt="young man swimming"
+              class="about-item-2__photo about-item-2__photo--p1"
+            />
+            <img
+              src="/img/2.jpg"
+              alt="a dog laying on it's back"
+              class="about-item-2__photo about-item-2__photo--p2"
+            />
+            <img
+              src="/img/3.jpg"
+              alt="photo of a fabric heart by Renee Fisher"
+              class="about-item-2__photo about-item-2__photo--p3"
+            />
+          </div>
+        </div>
+        <div class="tech u-center-text">
+          <p>
+            I'm currently using Javascript with HTML5 and CSS3
+          </p>
+          <img src="/img/tech.png" alt="tech I use logos" class="logos" />
+        </div>
+      </section>
+
+      <section id="contact" class="section-contact u-center-text">
+        <h2 class="heading-secondary">
+          Contact Me
+        </h2>
+        <div class="contact-container">
+          <div class="contact-item-1">
+            <div class="contact-item-1__logo">
+              <a href="https://www.github.com/Neilson09" target="blank"
+                ><img
+                  src="/img/github.png"
+                  alt="GitHub logo"
+                  class="contact-item-1__logo--gh"
+              /></a>
+            </div>
+          </div>
+          <div class="contact-item-2">
+            <div class="contact-item-2__logo">
+              <a
+                href="https://www.linkedin.com/in/cindy-neilson/"
+                target="blank"
+                ><img
+                  src="/img/ln.png"
+                  alt="LinkedIn logo"
+                  class="contact-item-2__logo--ln"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <img
+          src="/img/spiral.png"
+          alt="Golden Ratio Spiral"
+          class="footer__logo"
+        />
+      </div>
+      <div class="footer__navigation">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#home" class="footer__link">Home</a>
+          </li>
+          <li class="footer__item">
+            <a href="#projects" class="footer__link">Projects</a>
+          </li>
+          <li class="footer__item">
+            <a href="#about" class="footer__link">About Me</a>
+          </li>
+          <li class="footer__item">
+            <a href="#contact" class="footer__link">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

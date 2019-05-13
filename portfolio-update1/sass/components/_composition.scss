@@ -1,0 +1,63 @@
+.about-item-2 {
+  position: relative;
+  padding-top: 8rem;
+  justify-content: center;
+
+  &__photo {
+    width: 55%;
+    border-radius: 3px;
+    text-align: center;
+    padding: 1.5rem 0.5rem;
+    outline-offset: 1.25rem;
+    transition: all 0.2s;
+
+    @include respond(phone) {
+      position: relative;
+    }
+
+    &--p1 {
+      width: 45%;
+
+      @include respond(tab-port) {
+        width: 75%;
+      }
+
+      @include respond(phone) {
+        width: 95%;
+      }
+    }
+
+    &--p2 {
+      width: 45%;
+
+      @include respond(tab-port) {
+        width: 75%;
+      }
+      @include respond(phone) {
+        width: 95%;
+      }
+    }
+
+    &--p3 {
+      width: 45%;
+
+      @include respond(tab-port) {
+        width: 75%;
+      }
+      @include respond(phone) {
+        width: 95%;
+      }
+    }
+
+    &:hover {
+      outline: 1.25rem solid $color-orange-2;
+      transform: scale (1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 20;
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}

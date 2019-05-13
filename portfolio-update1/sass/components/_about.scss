@@ -1,0 +1,35 @@
+.section-about {
+  padding: 5rem 0 3rem 0;
+  font-size: 1.4rem;
+  color: $color-blue-1;
+}
+
+.about-item-1 {
+  text-align: left;
+  padding: 1rem;
+  margin-left: 1rem;
+  min-width: 50%;
+  background-color: rgba($color-box-bg, 0.45);
+
+  @include respond(phone) {
+    padding: 0.25rem;
+    min-width: 38%;
+    font-size: 1.2rem;
+  }
+
+  .paragraph {
+    padding: 1rem 1rem 1rem 2rem;
+  }
+
+  ul {
+    list-style: inside none;
+    padding: 1rem 0 2rem 2rem;
+    @include respond(phone) {
+      list-style: circle;
+    }
+  }
+}
+
+.logos {
+  padding-top: 1rem;
+}

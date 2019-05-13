@@ -1,0 +1,21 @@
+.header {
+  height: 60vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-fade-A, 0.05),
+      rgba($color-fade-B, 0.4)
+    ),
+    url(/img/blank.jpg);
+  position: relative;
+  background-position: bottom;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 44vh);
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+  }
+}

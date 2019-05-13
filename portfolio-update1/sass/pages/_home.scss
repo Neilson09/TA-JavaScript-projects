@@ -1,0 +1,9 @@
+.section-about {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-fade-A, 0.2),
+      rgba($color-fade-B, 0.75)
+    ),
+    url(/img/e.jpg);
+  background-size: cover;
+}

@@ -1,0 +1,14 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical/2;
+  }
+
+  @include clearfix;
+}
+
+[class^="col-"] {
+  width: calc((100% - #{$gutter-horizontal}) / 2);
+}

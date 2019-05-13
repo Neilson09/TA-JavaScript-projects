@@ -1,0 +1,20 @@
+.section-contact {
+  padding: 5rem 0 3rem 0;
+  text-align: center;
+
+  .contact-item-1 {
+    &__logo {
+      &--gh {
+        width: 75%;
+      }
+    }
+  }
+
+  .contact-item-2 {
+    &__logo {
+      &--ln {
+        width: 75%;
+      }
+    }
+  }
+}
