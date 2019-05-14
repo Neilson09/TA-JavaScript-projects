@@ -435,6 +435,12 @@ body {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
+.project-item-3 {
+  background-color: #4b4d5e;
+  color: #001b2d;
+  padding: 3rem;
+}
+
 .about-container,
 .project-container,
 .contact-container {
