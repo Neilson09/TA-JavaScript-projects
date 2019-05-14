@@ -11,21 +11,17 @@
   <style>
     .order {
       font-family: trajan-pro-3, serif;
-      font-weight: 600;
-      font-style: normal;
-      background-color: #163359;
-      color: #4c53ff;
-      margin: 0 auto;
       text-align: center;
-      border: 6px solid #4c53ff;
-      border-radius: 5%;
+      background-color: #163359;
+      color: cyan;
+      border: 6px solid #8f1d2c;
     }
 
     fieldset {
       border: 3px solid #8435f2;
       border-radius: 4%;
       color: #0ad8d8;
-      margin: 20px;
+      margin: 25px;
     }
 
     fieldset.size {
@@ -44,8 +40,12 @@
       text-align: left;
     }
 
+    h1 {
+      font-size: 45px;
+      text-shadow: 13px 16px 16px rgba(21, 0, 41, 1);
+    }
     h2 {
-      color: #04f2da;
+      color: cyan;
       text-emphasis: initial;
     }
 
@@ -53,28 +53,29 @@
       color: #4c53ff;
     }
 
-    .row {
-      margin: 0 auto;
+    .container-size,
+    .container-sauce,
+    .container-crust-B {
+      display: flex;
+      justify-content: space-around;
+      text-align: left;
+      margin-bottom: 3%;
     }
 
-    .col-2 {
-      float: right;
-      width: calc((100% - 50px) / 2);
+    .container-meat,
+    .container-veg,
+    .container-cheese,
+    .container-crust-A {
+      display: flex;
+      justify-content: space-around;
       text-align: left;
-      padding: 0 15px 30px 15px;
-    }
-
-    .col-3 {
-      float: left;
-      width: calc((100% - 2 * 50px) / 3);
-      text-align: left;
-      padding: 0 0 50px auto;
     }
 
     button {
       background-color: #0c1335;
       border-color: #0c3142;
       color: #04c6f2;
+      font-family: trajan-pro-3, serif;
       margin: 1px 10px 20px auto;
       height: 35px;
       width: 80px;
@@ -84,7 +85,7 @@
     button:hover,
     input:hover {
       background-color: #8435f2;
-      color: #0c3142;
+      color: #000;
       font-weight: bold;
       border: 2px solid #0c3142;
     }
@@ -102,49 +103,60 @@
         <legend>
           <em><h2>size</h2></em>
         </legend>
-        <input type="radio" name="size" value="personal" />Personal $6.00
-        <input type="radio" name="size" value="medium" />Medium $10.00
-        <input type="radio" name="size" value="large" />Large $14.00
-        <input type="radio" name="size" value="XL" />Extra Large $16.00
+        <div class="container-size">
+          <div class="size-item-1">
+            <input type="radio" name="size" value="personal" />Personal $6.00<br />
+            <input type="radio" name="size" value="medium" />Medium $10.00
+          </div>
+          <div class="size-item-2">
+            <input type="radio" name="size" value="large" />Large $14.00<br />
+            <input type="radio" name="size" value="XL" />Extra Large $16.00
+          </div>
+        </div>
       </fieldset>
 
       <fieldset class="base">
         <legend>
           <em><h2>base</h2></em>
         </legend>
+
         <div class="crust">
           <h3>Crust</h3>
-          <div class="row">
-            <div class="crust-1">
-              <div class="col-3">
-                <input type="radio" name="crust" value="plain" />Plain Crust
-              </div>
-              <div class="col-3">
-                <input type="radio" name="crust" value="garlic-butter" />Garlic
-                Butter Crust
-              </div>
-              <div class="col-3">
-                <input type="radio" name="crust" value="cheese" />Cheese Stuffed
-                Crust
-              </div>
+          <div class="container-crust-A">
+            <div class="crust-item-1">
+              <input type="radio" name="crust" value="plain" />Plain Crust
             </div>
-            <div class="crust-2">
-              <div class="col-2">
-                <input type="radio" name="crust" value="spicy" />Spicy Crust
-              </div>
-              <div class="col-2">
-                <input type="radio" name="crust" value="special" />House Special
-                Crust
-              </div>
+            <div class="crust-item-2">
+              <input type="radio" name="crust" value="garlic-butter" />Garlic
+              Butter
+            </div>
+            <div class="crust-item-3">
+              <input type="radio" name="crust" value="cheese" />Cheese Stuffed
+            </div>
+          </div>
+          <div class="container-crust-B">
+            <div class="crust-item-4">
+              <input type="radio" name="crust" value="spicy" />Spicy Crust
+            </div>
+            <div class="crust-item-5">
+              <input type="radio" name="crust" value="special" />House Special
             </div>
           </div>
         </div>
 
-        <h3>Sauce</h3>
-        <input type="radio" name="sauce" value="marinara" />Marinara Sauce
-        <input type="radio" name="sauce" value="white sauce" />White Sauce
-        <input type="radio" name="sauce" value="bbq" />Barbeque Sauce
-        <input type="radio" name="sauce" value="none" />No Sauce
+        <div class="sauce">
+          <h3>Sauce</h3>
+          <div class="container-sauce">
+            <div class="sauce-item-1">
+              <input type="radio" name="sauce" value="marinara" />Marinara<br />
+              <input type="radio" name="sauce" value="white sauce" />White Sauce
+            </div>
+            <div class="sauce-item-2">
+              <input type="radio" name="sauce" value="bbq" />Barbeque<br />
+              <input type="radio" name="sauce" value="none" />No Sauce
+            </div>
+          </div>
+        </div>
       </fieldset>
 
       <fieldset class="toppings">
@@ -154,57 +166,61 @@
         <p>
           $1.00 per topping after first complimentary meat and cheese toppings
         </p>
-        <div class="row">
-          <div class="meat">
-            <h3>Meat</h3>
-            <div class="col-3">
+        <div class="meat">
+          <h3>Meat</h3>
+          <div class="container-meat">
+            <div class="item-meat-1">
               <input type="checkbox" value="meat-a" />Pepperoni<br />
               <input type="checkbox" value="meat-b" />Sausage
             </div>
-
-            <div class="col-3">
+            <div class="item-meat-2">
               <input type="checkbox" value="meat-c" />Canadian Bacon<br />
               <input type="checkbox" value="meat-d" />Ground Beef
             </div>
-            <div class="col-3">
+            <div class="item-meat-3">
               <input type="checkbox" value="meat-e" />Anchovy<br />
               <input type="checkbox" value="meat-d" />Chicken
             </div>
           </div>
-
-          <div class="veg">
-            <h3>Vegetables</h3>
-            <div class="col-3">
+        </div>
+        <div class="veg">
+          <h3>Vegetables</h3>
+          <div class="container-veg">
+            <div class="item-veg-1">
               <input type="checkbox" value="veg-a" />Tomatoes<br />
               <input type="checkbox" value="veg-b" />Onions<br />
               <input type="checkbox" value="veg-c" />Olives
             </div>
-            <div class="col-3">
+            <div class="item-veg-2">
               <input type="checkbox" value="veg-d" />Green Peppers<br />
               <input type="checkbox" value="veg-e" />Mushrooms<br />
               <input type="checkbox" value="veg-f" />Pineapple
             </div>
-            <div class="col-3">
+
+            <div class="item-veg-3">
               <input type="checkbox" value="veg-g" />Spinach<br />
               <input type="checkbox" value="veg-h" />Jalapeno<br />
               <input type="checkbox" value="veg-i" />Artichoke Hearts
             </div>
           </div>
-
-          <div class="cheese">
-            <h3>Cheese</h3>
-            <div class="col-3">
+        </div>
+        <div class="cheese">
+          <h3>Cheese</h3>
+          <div class="container-cheese">
+            <div class="item-cheese-1">
               <input type="radio" name="cheese" value="regular" />Regular
             </div>
-            <div class="col-3">
+            <div class="item-cheese-2">
               <input type="radio" name="cheese" value="none" />No cheese
             </div>
-            <div class="col-3">
+            <div class="item-cheese-3">
               <input type="radio" name="cheese" value="extra" />Extra Cheese,
               $3.00
             </div>
           </div>
         </div>
+
+        <br />
       </fieldset>
 
       <h3 id="total">$0.00</h3>
