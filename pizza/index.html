@@ -5,97 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://use.typekit.net/wul7jrr.css" />
-
+    <link rel="stylesheet" href="styles.css" />
     <title>Uncle Enzo's</title>
   </head>
-  <style>
-    .order {
-      font-family: trajan-pro-3, serif;
-      text-align: center;
-      background-color: #163359;
-      color: cyan;
-      border: 6px solid #8f1d2c;
-    }
-
-    fieldset {
-      border: 3px solid #8435f2;
-      border-radius: 4%;
-      color: #0ad8d8;
-      margin: 25px;
-    }
-
-    fieldset.size {
-      background-color: rgb(21, 0, 41);
-    }
-
-    fieldset.base {
-      background-color: #0c1335;
-    }
-
-    fieldset.toppings {
-      background-color: rgb(19, 30, 70);
-    }
-
-    legend {
-      text-align: left;
-    }
-
-    h1 {
-      font-size: 45px;
-      text-shadow: 13px 16px 16px rgba(21, 0, 41, 1);
-    }
-    h2 {
-      color: cyan;
-      text-emphasis: initial;
-    }
-
-    h3 {
-      color: #4c53ff;
-    }
-
-    .container-size,
-    .container-sauce,
-    .container-crust-B {
-      display: flex;
-      justify-content: space-around;
-      text-align: left;
-      margin-bottom: 3%;
-    }
-
-    .container-meat,
-    .container-veg,
-    .container-cheese,
-    .container-crust-A {
-      display: flex;
-      justify-content: space-around;
-      text-align: left;
-    }
-
-    button {
-      background-color: #0c1335;
-      border-color: #0c3142;
-      color: #04c6f2;
-      font-family: trajan-pro-3, serif;
-      margin: 1px 10px 20px auto;
-      height: 35px;
-      width: 80px;
-      border-radius: 4%;
-    }
-
-    button:hover,
-    input:hover {
-      background-color: #8435f2;
-      color: #000;
-      font-weight: bold;
-      border: 2px solid #0c3142;
-    }
-
-    #total {
-      color: #04c6f2;
-      font-weight: bolder;
-      font-size: 18px;
-    }
-  </style>
   <body>
     <main class="order">
       <h1 id="Menu">Cosa Nostra Pizza</h1>
@@ -227,36 +139,10 @@
       <button type="button" onclick="Total();">Total</button>
 
       <button type="button" onclick="Clear();">Clear</button>
-      <!--  <button type="button" onsubmit="XXXXXXXXXXXXX">Submit Order</button> -->
+      <button type="button" onsubmit="XXXXXXXXXXXXX">
+        <st>confirm order</st>
+      </button>
     </main>
-    <script>
-      var txt1 = document.getElementById("txt1");
-      var txt2 = document.getElementById("txt2");
-      var total = document.getElementById("total");
-
-      function Calc() {
-        var result = document.querySelector('input[name="calc"]:checked').value;
-        var num1 = parseInt(txt1.value);
-        console.log(typeof num1);
-        console.log(isNaN(num1));
-        var num2 = parseInt(txt2.value);
-        console.log(typeof num2);
-        console.log(isNaN(num2));
-        if (result == "*") {
-          total.innerHTML = (num1 * num2).toFixed(2);
-        } else if (result == "/") {
-          total.innerHTML = (num1 / num2).toFixed(2);
-        } else if (result == "+") {
-          total.innerHTML = (num1 + num2).toFixed(2);
-        } else if (result == "-") {
-          total.innerHTML = (num1 - num2).toFixed(2);
-        }
-      }
-      function Clear() {
-        txt1.value = "";
-        txt2.value = "";
-        total.innerHTML = "0.00";
-      }
-    </script>
+    <script type="module" src="html.js"></script>
   </body>
 </html>

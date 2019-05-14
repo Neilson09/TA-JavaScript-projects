@@ -1,0 +1,87 @@
+.order {
+  font-family: trajan-pro-3, serif;
+  text-align: center;
+  background-color: #163359;
+  color: cyan;
+  border: 6px solid #8f1d2c;
+}
+
+fieldset {
+  border: 3px solid #8435f2;
+  border-radius: 4%;
+  color: #0ad8d8;
+  margin: 25px;
+}
+
+fieldset.size {
+  background-color: rgb(21, 0, 41);
+}
+
+fieldset.base {
+  background-color: #0c1335;
+}
+
+fieldset.toppings {
+  background-color: rgb(19, 30, 70);
+}
+
+legend {
+  text-align: left;
+}
+
+h1 {
+  font-size: 45px;
+  text-shadow: 13px 16px 16px rgba(21, 0, 41, 1);
+}
+h2 {
+  color: cyan;
+  text-emphasis: initial;
+}
+
+h3 {
+  color: #4c53ff;
+}
+
+.container-size,
+.container-sauce,
+.container-crust-B {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  margin-bottom: 3%;
+}
+
+.container-meat,
+.container-veg,
+.container-cheese,
+.container-crust-A {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+button {
+  background-color: #0c1335;
+  border-color: #0c3142;
+  color: #04c6f2;
+  font-family: trajan-pro-3, serif;
+  font-size: 12px;
+  margin: 0 5px 20px auto;
+  height: 35px;
+  width: 80px;
+  border-radius: 4%;
+}
+
+button:hover,
+input:hover {
+  background-color: #8435f2;
+  color: #000;
+  font-weight: bold;
+  border: 2px solid #0c3142;
+}
+
+#total {
+  color: #04c6f2;
+  font-weight: bolder;
+  font-size: 18px;
+}
