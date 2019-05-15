@@ -3,7 +3,8 @@
   text-align: center;
   background-color: #163359;
   color: cyan;
-  border: 6px solid #8f1d2c;
+  border: 7px solid #3d0ce8;
+  margin: 6px;
 }
 
 fieldset {
@@ -63,21 +64,28 @@ h3 {
 button {
   background-color: #0c1335;
   border-color: #0c3142;
-  color: #04c6f2;
+  color: #0d75ff;
   font-family: trajan-pro-3, serif;
   font-size: 12px;
   margin: 0 5px 20px auto;
-  height: 35px;
+  height: 44px;
   width: 80px;
   border-radius: 4%;
 }
 
 button:hover,
 input:hover {
-  background-color: #8435f2;
-  color: #000;
+  background-color: #3d0ce8;
+  color: #0000ff;
   font-weight: bold;
   border: 2px solid #0c3142;
+}
+
+.confirm {
+  background-color: rgb(57, 69, 140);
+  border: 10px solid #3d0ce8;
+  margin: 0 44% 7% 44%;
+  padding-top: 1.5%;
 }
 
 #total {

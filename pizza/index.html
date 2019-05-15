@@ -134,14 +134,16 @@
 
         <br />
       </fieldset>
-
       <h3 id="total">$0.00</h3>
-      <button type="button" onclick="Total();">Total</button>
-
-      <button type="button" onclick="Clear();">Clear</button>
-      <button type="button" onsubmit="XXXXXXXXXXXXX">
-        <st>confirm order</st>
-      </button>
+      <div class="calc">
+        <button class="button" onclick="Total();">total</button>
+        <button class="button" onclick="Clear();">clear</button><br />
+        <div class="confirm">
+          <button class="button" onsubmit="XXXXXXXXXXXXX">
+            <strong>CONFIRM ORDER</strong>
+          </button>
+        </div>
+      </div>
     </main>
     <script type="module" src="html.js"></script>
   </body>
