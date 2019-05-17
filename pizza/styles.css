@@ -23,7 +23,7 @@ fieldset.base {
 }
 
 fieldset.toppings {
-  background-color: rgb(19, 30, 70);
+  background-color: red; /*#131e46;*/
 }
 
 legend {
