@@ -1,12 +1,5 @@
-function getReceipt() {
-  var text1 = "<h3>You Ordered:</h3>";
-  var runningTotal = 0;
-  var sizeTotal = 0;
-  var sizeArray = document.getElementsByClassName("size");
-  for (var i = 0; i < sizeArray.length; i++) {
-    if (sizeArray[i].checked) {
-      var selectedSize = sizeArray[i].value;
-      text1 = text1 + selectedSize + "<br>";
-    }
-  }
-}
+var selectedSize = document.querySelector('input[name="size"]:checked').value;
+var selectedCrust = document.querySelector('input[name="crust"]:checked').value;
+var selectedSauce = document.querySelector('input[name="sauce"]:checked').value;
+var selectedCheese = document.querySelector('input[name="cheese"]:checked')
+  .value;

@@ -17,12 +17,12 @@
         </legend>
         <div class="container-size">
           <div class="size-item-1">
-            <input type="radio" name="size" value="personal" />Personal $6.00<br />
-            <input type="radio" name="size" value="medium" />Medium $10.00
+            <input type="radio" name="size" value="personal" />Personal<br />
+            <input type="radio" name="size" value="medium" />Medium
           </div>
           <div class="size-item-2">
-            <input type="radio" name="size" value="large" />Large $14.00<br />
-            <input type="radio" name="size" value="XL" />Extra Large $16.00
+            <input type="radio" name="size" value="large" />Large<br />
+            <input type="radio" name="size" value="XL" />Extra Large
           </div>
         </div>
       </fieldset>
@@ -35,23 +35,31 @@
         <div class="crust">
           <h3>Crust</h3>
           <div class="container-crust-A">
-            <div class="crust-item-1">
-              <input type="radio" name="crust" value="plain" />Plain Crust
+            <div class="crust">
+              <input type="radio" name="crust" value="plain crust" />Plain Crust
             </div>
-            <div class="crust-item-2">
-              <input type="radio" name="crust" value="garlic-butter" />Garlic
-              Butter
+            <div class="crust">
+              <input
+                type="radio"
+                name="crust"
+                value="garlic butter crust"
+              />Garlic Butter
             </div>
-            <div class="crust-item-3">
-              <input type="radio" name="crust" value="cheese" />Cheese Stuffed
+            <div class="crust">
+              <input
+                type="radio"
+                name="crust"
+                value="cheese stuffed crust"
+              />Cheese Stuffed
             </div>
           </div>
           <div class="container-crust-B">
-            <div class="crust-item-4">
-              <input type="radio" name="crust" value="spicy" />Spicy Crust
+            <div class="crust">
+              <input type="radio" name="crust" value="spicy crust" />Spicy Crust
             </div>
-            <div class="crust-item-5">
-              <input type="radio" name="crust" value="special" />House Special
+            <div class="crust">
+              <input type="radio" name="crust" value="special crust" />House
+              Special
             </div>
           </div>
         </div>
@@ -60,12 +68,36 @@
           <h3>Sauce</h3>
           <div class="container-sauce">
             <div class="sauce-item-1">
-              <input type="radio" name="sauce" value="marinara" />Marinara<br />
+              <input
+                type="radio"
+                name="sauce"
+                value="marinara sauce"
+              />Marinara<br />
               <input type="radio" name="sauce" value="white sauce" />White Sauce
             </div>
             <div class="sauce-item-2">
-              <input type="radio" name="sauce" value="bbq" />Barbeque<br />
-              <input type="radio" name="sauce" value="none" />No Sauce
+              <input
+                type="radio"
+                name="sauce"
+                value="bbq sauce"
+              />Barbeque<br />
+              <input type="radio" name="sauce" value="no sauce" />No Sauce
+            </div>
+          </div>
+        </div>
+
+        <div class="cheese">
+          <h3>Cheese</h3>
+          <div class="container-cheese">
+            <div class="item-cheese-1">
+              <input type="radio" name="cheese" value="regular cheese" />Regular
+            </div>
+            <div class="item-cheese-2">
+              <input type="radio" name="cheese" value="no cheese" />No cheese
+            </div>
+            <div class="item-cheese-3">
+              <input type="radio" name="cheese" value="extra cheese" />Extra
+              Cheese, $3.00
             </div>
           </div>
         </div>
@@ -77,46 +109,38 @@
         </legend>
         <p>
           Your first topping is on the house, compliments of Uncle Enzo.<br />
-          Additional toppings are $1.00 each, and extra cheese is $3.00.
+          Additional toppings are $1.00 each.
         </p>
-        <div class="toppings-meat">
+        <div class="meat">
           <h3>Meat</h3>
           <div class="container-meat">
             <div class="item-meat-1">
               <input
                 type="checkbox"
-                value="meat-a"
-                class="toppings-pepperoni"
+                value="pepperoni"
+                class="toppings"
               />Pepperoni<br />
-              <input
-                type="checkbox"
-                value="meat-b"
-                class="toppings-sausage"
-              />Sausage
+              <input type="checkbox" value="sausage" class="toppings" />Sausage
             </div>
             <div class="item-meat-2">
               <input
                 type="checkbox"
-                value="meat-c"
-                class="toppings-Canadian-bacon"
+                value="Canadian bacon"
+                class="toppings"
               />Canadian Bacon<br />
               <input
                 type="checkbox"
-                value="meat-d"
-                class="toppings-beef"
+                value="ground beef"
+                class="toppings"
               />Ground Beef
             </div>
             <div class="item-meat-3">
               <input
                 type="checkbox"
-                value="meat-e"
-                class="toppings-anchovy"
+                value="anchovy"
+                class="toppings"
               />Anchovy<br />
-              <input
-                type="checkbox"
-                value="meat-d"
-                class="toppings-chicken"
-              />Chicken
+              <input type="checkbox" value="chicken" class="toppings" />Chicken
             </div>
           </div>
         </div>
@@ -126,41 +150,50 @@
             <div class="item-veg-1">
               <input
                 type="checkbox"
-                value="veg-a"
+                value="tomatoes"
                 class="toppings"
               />Tomatoes<br />
               <input
                 type="checkbox"
-                value="veg-b"
+                value="onions"
                 class="toppings"
               />Onions<br />
-              <input type="checkbox" value="veg-c" class="toppings" />Olives
+              <input type="checkbox" value="olives" class="toppings" />Olives
             </div>
             <div class="item-veg-2">
-              <input type="checkbox" value="veg-d" />Green Peppers<br />
-              <input type="checkbox" value="veg-e" />Mushrooms<br />
-              <input type="checkbox" value="veg-f" />Pineapple
+              <input
+                type="checkbox"
+                value="green peppers"
+                class="toppings"
+              />Green Peppers<br />
+              <input
+                type="checkbox"
+                value="mushrooms"
+                class="toppings"
+              />Mushrooms<br />
+              <input
+                type="checkbox"
+                value="pineapple"
+                class="toppings"
+              />Pineapple
             </div>
 
             <div class="item-veg-3">
-              <input type="checkbox" value="veg-g" />Spinach<br />
-              <input type="checkbox" value="veg-h" />Jalapeno<br />
-              <input type="checkbox" value="veg-i" />Artichoke Hearts
-            </div>
-          </div>
-        </div>
-        <div class="cheese">
-          <h3>Cheese</h3>
-          <div class="container-cheese">
-            <div class="item-cheese-1">
-              <input type="radio" name="cheese" value="regular" />Regular
-            </div>
-            <div class="item-cheese-2">
-              <input type="radio" name="cheese" value="none" />No cheese
-            </div>
-            <div class="item-cheese-3">
-              <input type="radio" name="cheese" value="extra" />Extra Cheese,
-              $3.00
+              <input
+                type="checkbox"
+                value="spinach"
+                class="toppings"
+              />Spinach<br />
+              <input
+                type="checkbox"
+                value="jalapeno"
+                class="toppings"
+              />Jalapeno<br />
+              <input
+                type="checkbox"
+                value="artichoke hearts"
+                class="toppings"
+              />Artichoke Hearts
             </div>
           </div>
         </div>
