@@ -14,7 +14,7 @@ if (selectedSize === "personal") {
 } else if (selectedSize === "XL") {
   sizeTotal = 16;
 }
-
+console.log(selectedSize);
 var toppingsArray = document.getElementsByClassName("toppings");
 
 function getToppings() {
