@@ -1,3 +1,7 @@
+var text = "Confirm your order:";
+var runningTotal = 0;
+var sizeTotal = 0;
+var cheeseTotal = 0;
 var selectedSize = document.querySelector('input[name="size"]:checked').value;
 if (selectedSize === "personal pizza") {
   sizeTotal = 6;
@@ -8,48 +12,40 @@ if (selectedSize === "personal pizza") {
 } else if (selectedSize === "extra large pizza") {
   sizeTotal = 16;
 }
-
+text = text + " " + " " + selectedSize; // + ", $" + sizeTotal + ".00";
+runningTotal = sizeTotal;
+var selectedCrust = document.querySelector('input[name="crust"]:checked').value;
+text = text + " with " + selectedCrust + ", ";
+var selectedSauce = document.querySelector('input[name="sauce"]:checked').value;
+text = text + selectedSauce + ", ";
+var selectedCheese = document.querySelector('input[name="cheese"]:checked')
+  .value;
+if (selectedCheese === "extra cheese") {
+  cheeseTotal = 3;
+}
+text = text + selectedCheese + ", and ";
+runningTotal = runningTotal + cheeseTotal;
+var toppingsTotal = 0;
 var toppingsArray = document.getElementsByClassName("toppings");
 var selectedToppings = [];
 for (var i = 0; i < toppingsArray.length; i++) {
   if (toppingsArray[i].checked) {
     selectedToppings.push(toppingsArray[i].value);
+    text = text + selectedToppings + " ";
   }
 }
-
-"Confirm your order:" <
-  br >
-  +selectedSize + ", $" + sizeTotal + ".00" <
-  br >
-  +selectedCrust <
-  br >
-  +selectedSauce <
-  br >
-  +selectedCheese + ", $" + cheeseTotal + ".00" <
-  br >
-  +selectedToppings + ", $" + toppingsTotal + ".00" <
-  br >
-  function getToppings() {
-    var selectedToppings = document.querySelectorAll(
-      'input[name="toppings"]:checked'
-    );
-    for (var j = 0; j < selectedToppingsArray.length; j++) {
-      if (toppingsArray[j].checked) {
-        count++;
-        selectedToppings.push(toppingsArray[j].value);
-        console.log(selectedToppings);
-      }
-    }
-  };
-console.log(selectedToppings);
+var toppingsCount = selectedToppings.length;
+if (toppingsCount > 1) {
+  toppingsTotal = toppingsCount - 1;
+} else {
+  toppingsTotal = 0;
+}
+runningTotal = runningTotal + toppingsTotal;
+text = text + "TOTAL: $" + runningTotal + ".00";
+document.getElementByClassName("total").innerHTML = text;
 
 /*
-ctrl+shft+J in Chrome instead of ctrl+shft+I for console log
-    console.log(selectedSize + " = $" + sizeTotal + ".00");
-    console.log("size text1: " + text1);
-    console.log("subtotal: $" + runningTotal + ".00");
-*/
-var selectedCrust = document.querySelector('input[name="crust"]:checked').value;
-var selectedSauce = document.querySelector('input[name="sauce"]:checked').value;
-var selectedCheese = document.querySelector('input[name="cheese"]:checked')
-  .value;
+  document.getElementById("showText").innerHTML = text;
+  document.getElementById("totalPrice").innerHTML =
+    */
+//ctrl+shft+J in Chrome instead of ctrl+shft+I for console log

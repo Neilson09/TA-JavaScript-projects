@@ -22,8 +22,8 @@ fieldset.base {
   background-color: #0c1335;
 }
 
-fieldset.toppings {
-  background-color: red; /*#131e46;*/
+fieldset.all-toppings {
+  background-color: #131e46;
 }
 
 legend {
@@ -81,8 +81,9 @@ input:hover {
   border: 3px solid #0000ff;
 }
 
-#total {
+/*
+#total *{
   color: #04c6f2;
   font-weight: bolder;
   font-size: 18px;
-}
+}*/
