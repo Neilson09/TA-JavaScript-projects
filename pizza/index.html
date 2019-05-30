@@ -22,7 +22,12 @@
               name="size"
               value="personal pizza"
             />Personal<br />
-            <input type="radio" name="size" value="medium pizza" />Medium
+            <input
+              type="radio"
+              name="size"
+              value="medium pizza"
+              checked
+            />Medium
           </div>
           <div class="size-item-2">
             <input type="radio" name="size" value="large pizza" />Large<br />
@@ -48,6 +53,7 @@
                 type="radio"
                 name="crust"
                 value="garlic butter crust"
+                checked
               />Garlic Butter
             </div>
             <div class="crust-item-3">
@@ -78,7 +84,12 @@
                 name="sauce"
                 value="marinara sauce"
               />Marinara<br />
-              <input type="radio" name="sauce" value="white sauce" />White Sauce
+              <input
+                type="radio"
+                name="sauce"
+                value="white sauce"
+                checked
+              />White Sauce
             </div>
             <div class="sauce-item-2">
               <input
@@ -101,8 +112,12 @@
               <input type="radio" name="cheese" value="no cheese" />No cheese
             </div>
             <div class="item-cheese-3">
-              <input type="radio" name="cheese" value="extra cheese" />Extra
-              Cheese, $3.00
+              <input
+                type="radio"
+                name="cheese"
+                value="extra cheese"
+                checked
+              />Extra Cheese, $3.00
             </div>
           </div>
         </div>
@@ -132,11 +147,13 @@
                 type="checkbox"
                 class="toppings"
                 value="Canadian bacon"
+                checked
               />Canadian Bacon<br />
               <input
                 type="checkbox"
                 class="toppings"
                 value="ground beef"
+                checked
               />Ground Beef
             </div>
             <div class="item-meat-3">
@@ -157,11 +174,13 @@
                 type="checkbox"
                 class="toppings"
                 value="tomatoes"
+                checked
               />Tomatoes<br />
               <input
                 type="checkbox"
                 class="toppings"
                 value="onions"
+                checked
               />Onions<br />
               <input type="checkbox" class="toppings" value="olives" />Olives
             </div>
@@ -216,9 +235,10 @@
         </div>
       </div>-->
       <div class="total">
-        <button class="button" onclick="total">total</button>
+        <button class="button" onclick="total()">total</button>
       </div>
+      <div id="Order"></div>
     </main>
-    <script type="module" src="html.js"></script>
+    <script type="text/javascript" src="html.js"></script>
   </body>
 </html>
